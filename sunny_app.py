@@ -19,13 +19,16 @@ with header:
     
 with data:
     st.title('Please enter episode details')
-    episode_name = st.text_area("Enter Episode Name")
-    series_number = st.number_input("Enter Series Number", min_value=0, max_value=100, step=1)
-    episode_number = st.number_input("Enter Episode Number", min_value=0, max_value=100, step=1)
-    main_pro = st.selectbox('Who was main character', ('Dennis', 'Charlie', 'Dee', 'Mac', 'Frank', 'Waitress', 'Cricket'))
-    rating = st.number_input("Enter Rating", min_value=1, max_value=5, step=1)
+    ep_na = st.text_area("Enter Episode Name")
+    se_nu = st.number_input("Enter Series Number", min_value=0, max_value=100, step=1)
+    ep_nu = st.number_input("Enter Episode Number", min_value=0, max_value=100, step=1)
+    pro = st.selectbox('Who was main character', ('Dennis', 'Charlie', 'Dee', 'Mac', 'Frank', 'Waitress', 'Cricket'))
+    ra = st.number_input("Enter Rating", min_value=1, max_value=5, step=1)
     
-    
-data = {'Epsiode name':episode_name, 'Series Number': series_number, 'Episode number': episode_number, 
-        'Main Protagonist': main_pro, "Overall Rating": rating}
+    def get_data():
+        return []
+    if st.button("Add row"):
+        get_data().append({'Epsiode name':episode_name, 'Series Number': series_number, 'Episode number': episode_number, 
+        'Main Protagonist': main_pro, "Overall Rating": rating})
 
+    st.write(pd.DataFrame(get_data()))
