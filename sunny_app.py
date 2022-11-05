@@ -32,4 +32,4 @@ with data:
         get_data().append({'Epsiode name':ep_na, 'Series Number': se_nu, 'Episode number': ep_nu, 
         'Main Protagonist': pro, "Overall Rating": ra})
 
-    st.write(pd.DataFrame(get_data()))
+    df = st.write(pd.DataFrame(get_data()))
