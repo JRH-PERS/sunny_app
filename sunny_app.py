@@ -26,6 +26,7 @@ with data:
     pro = st.selectbox('Who was main character', ('Dennis', 'Charlie', 'Dee', 'Mac', 'Frank', 'Waitress', 'Cricket'))
     ra = st.number_input("Enter Rating", min_value=1, max_value=5, step=1)
     
+    @st.cache(allow_output_mutation=True)
     def get_data():
         return []
     if st.button("Add row"):
