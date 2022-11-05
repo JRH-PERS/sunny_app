@@ -33,4 +33,3 @@ with data:
         'Main Protagonist': pro, "Overall Rating": ra})
 
     df = st.write(pd.DataFrame(get_data()))
-    st.write(df.head())
