@@ -28,8 +28,8 @@ with data:
     
     def get_data():
         return []
-        if st.button("Add row"):
-          get_data().append({'Epsiode name':ep_na, 'Series Number': se_nu, 'Episode number': ep_nu, 
-          'Main Protagonist': pro, "Overall Rating": ra})
+    if st.button("Add row"):
+        get_data().append({'Epsiode name':ep_na, 'Series Number': se_nu, 'Episode number': ep_nu, 
+        'Main Protagonist': pro, "Overall Rating": ra})
 
     df = st.write(pd.DataFrame(get_data()))
